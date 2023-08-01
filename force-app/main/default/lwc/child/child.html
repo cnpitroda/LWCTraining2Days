@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Child">
+        <lightning-input label="First Name" value={firstName} name="firstName" onchange={handleChange}></lightning-input>
+        <lightning-input label="Last Name" value={lastName} name="lastName" onchange={handleChange}></lightning-input>
+        Company Name:<lightning-formatted-text value={companyName}></lightning-formatted-text>
+        <br/>
+        Upper Case Full Name : <lightning-formatted-text value={uppercasedFullName}></lightning-formatted-text>
+        <br/>
+        Full Name: {fullName.firstName} {fullName.lastName}
+        <br/>
+        <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+        <lightning-button label="Dispatch Event" onclick={handledispatchEvent}></lightning-button>
+    </lightning-card>
+</template>

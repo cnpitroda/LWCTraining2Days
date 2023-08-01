@@ -1,0 +1,11 @@
+<aura:component controller="LightningOpportunityController" implements="flexipage:availableForAllPageTypes" access="global" >
+	 <aura:attribute name="mycolumn" type="Object[]"/>
+      <aura:attribute name="data" type="object"/>
+      
+    <aura:handler name="init" value="{!this}"	action="{!c.onInit}"/>
+    <p> All Opportunities</p>
+        <aura:if isTrue="{!v.data.length > 0}">
+          	<lightning:datatable data="{!v.data}" columns="{!v.mycolumn}" keyField="id">
+            </lightning:datatable>
+      </aura:if>
+</aura:component>

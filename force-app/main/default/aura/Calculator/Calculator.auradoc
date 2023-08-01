@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="Calculator Example" ref="CalcComponentName" label="Label">
+		 Calculator Component allows you to calculate the result
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable" >
+    <aura:attribute name="seachSize" type="decimal"/>
+    <aura:handler name="sampleComponentEvent" event="c:AccountEvent" action="{!c.onInit}" phase="capture"/>
+    <p> Account Home</p>
+    Search Size : {!v.seachSize}
+    <lightning:tile label="Account Home">
+        <c:AccountDetails/>
+    </lightning:tile>
+	
+</aura:component>

@@ -1,0 +1,14 @@
+<apex:page controller="ContactController" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!contacts}" var="con">
+                <apex:column value="{!con.FirstName}"></apex:column>
+                <apex:column value="{!con.LastName}"></apex:column>
+                <apex:column value="{!con.Title}"></apex:column>
+                <apex:column value="{!con.Account.Name}"></apex:column>
+                <apex:column value="{!con.Account.Industry}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

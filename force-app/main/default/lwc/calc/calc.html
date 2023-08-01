@@ -1,0 +1,14 @@
+<template>
+    
+    <lightning-card title="Calculator">
+        <lightning-input label="Num1" value={num1} onchange={handleChange} name="num1"></lightning-input>
+        <lightning-input label="Num2" value={num2} onchange={handleChange} name="num2"></lightning-input>
+        Result: {result}
+        <br/>
+        <br/>
+        <lightning-button variant="brand" label="+" name="+" onclick={handleClick}></lightning-button>
+        <lightning-button variant="brand" label="-" name="-" onclick={handleClick}></lightning-button>
+        <lightning-button variant="brand" label="*" name="*" onclick={handleClick}></lightning-button>
+        <lightning-button variant="brand" label="/" name="/" onclick={handleClick}></lightning-button>
+    </lightning-card>
+</template>

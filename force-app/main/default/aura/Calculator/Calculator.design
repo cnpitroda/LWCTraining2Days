@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="num1Label" label="Enter the Name"/>
+    <design:attribute name="num2Label" label="Enter the Name"/>    
+</design:component>

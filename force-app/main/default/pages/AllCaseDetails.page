@@ -1,0 +1,18 @@
+<apex:page standardController="Case" recordSetVar="cases" tabStyle="Case" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!cases}" var="ca">
+                <apex:column value="{!ca.CaseNumber}"></apex:column>
+                <apex:column headerValue="Case Status">
+                    <apex:inputField value="{!ca.Status}"></apex:inputField>
+                </apex:column>
+                <apex:column headerValue="Case Subject">
+                    <apex:inputField value="{!ca.subject}"></apex:inputField>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

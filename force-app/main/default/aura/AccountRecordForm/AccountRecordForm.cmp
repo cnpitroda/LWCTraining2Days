@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Rating']"></aura:attribute>
+    
+    <lightning:recordForm aura:id="myForm" recordId="{!v.recordId}" objectApiName="Account" 
+                          fields="{!v.fields}" column="2" mode="edit" onsubmit="{!c.handleSubmit}"
+                        ></lightning:recordForm>
+</aura:component>

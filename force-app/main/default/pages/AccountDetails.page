@@ -1,0 +1,21 @@
+<apex:page standardController="Account" >
+    <p>
+        Hello {!$User.FirstName}
+    </p>
+    <h2>
+        Welcome to Account App
+    </h2>
+    <apex:form >
+        <Apex:pageBlock title="Account View" mode="edit">
+            <apex:pageBlockSection title="Account Details" columns="2">
+                <apex:outputText value="{!account.name}"></apex:outputText>
+                <apex:inputField value="{!account.rating}"></apex:inputField>
+                <apex:inputField value="{!account.industry}"></apex:inputField>
+            </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:CommandButton action="{!save}" value="Save"></apex:CommandButton>
+        </apex:pageBlockButtons>
+        </Apex:pageBlock>
+       
+    </apex:form>
+</apex:page>

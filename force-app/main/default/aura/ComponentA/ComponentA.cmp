@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:registerEvent name="sampleApplicationEvent" type="c:SampleApplicationEvent"/>
+    <lightning:card title="Component A">
+        <lightning:button label="Send the Message" variant="brand" onclick="{!c.sendMessage}"/>
+    </lightning:card>
+</aura:component>

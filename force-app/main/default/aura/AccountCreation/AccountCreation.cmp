@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" >
+	<Lightning:RecordEditForm objectApiName="Account" onsuccess="{!c.handleSuccess}">
+        <lightning:inputField aura:id="nameField" fieldName="Name"/>
+        <lightning:inputField aura:id="ratingField" fieldName="Rating"/>
+        <lightning:inputField aura:id="typeField" fieldName="Type"/>
+        <lightning:inputField aura:id="revenueField" fieldName="AnnualRevenue"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create Account"/>
+    </Lightning:RecordEditForm>
+</aura:component>

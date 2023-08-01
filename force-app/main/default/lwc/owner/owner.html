@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Owner">
+        <c-container>
+            <c-child company-name="Cognizant Technology Solutions" onsampleevent={handleSampleevent} ></c-child>
+        </c-container>
+        <template if:true={eventDetails}>
+           Show Data from Event {eventDetails.fN} {eventDetails.lN}
+        </template>
+        <lightning-input label="Company Name" name="companyName" onchange={handleChange}></lightning-input>
+        <br/>
+        <lightning-button label="Set Company Name" onclick={handleClick}></lightning-button>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="eventMessage" type="string"/>
+    <aura:handler event="c:SampleApplicationEvent" action="{!c.getEvent}"/>
+    
+    <lightning:card title="Component B">
+        <p> Today's Message {!v.eventMessage}</p>
+    </lightning:card>
+</aura:component>

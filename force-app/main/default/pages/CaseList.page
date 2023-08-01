@@ -1,0 +1,14 @@
+<apex:page controller="CaseController" >
+    <Apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!cases}" var="ca">
+                <apex:column value="{!ca.CaseNumber}"></apex:column>
+                <apex:column value="{!ca.Status}"></apex:column>
+                <apex:column value="{!ca.Origin}"></apex:column>
+                <apex:column value="{!ca.Account.Name}"></apex:column>
+                <apex:column value="{!ca.Account.AnnualRevenue}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </Apex:form>
+               
+</apex:page>

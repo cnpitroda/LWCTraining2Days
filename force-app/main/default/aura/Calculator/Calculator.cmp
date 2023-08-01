@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" >
+    <aura:attribute name="num1Label" type="string" default="Enter the number"/>
+    <aura:attribute name="num2Label" type="string" default="Enter the number"/>
+    
+    <aura:attribute name="num1" type="Decimal"/>
+    <aura:attribute name="num2" type="Decimal"/>
+    <aura:attribute name="result" type="Decimal"/>
+    
+    <div class="row">
+        <h2 class="header">Calculator</h2>
+        <p></p>
+        <lightning:input type="number" name="input1" value="{!v.num1}" label="{!v.num1Label}"/>
+        <lightning:input type="number" name="input2" value="{!v.num2}" label="{!v.num2Label}"/>
+        <p><lightning:formattedNumber value="{!v.result}"/></p>
+    </div>
+    <div class="row">
+        <lightning:button variant="brand" label="+" onclick="{!c.addMethod}"/>
+        <lightning:button variant="brand" label="-" onclick="{!c.subMethod}"/>
+        <lightning:button variant="brand" label="*" onclick="{!c.mulMethod}"/>
+        <lightning:button variant="brand" label="/" onclick="{!c.divMethod}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component controller="LightningAccountController" >
+	 <aura:attribute name="mycolumn" type="Object[]"/>
+      <aura:attribute name="data" type="object"/>
+      <aura:attribute name="rating" type="string" default="hot"/>
+    <aura:handler name="init" value="{!this}"	action="{!c.onInit}"/>
+    <aura:registerEvent name="sampleComponentEvent" type="c:AccountEvent"/>
+    <p> All Accounts</p>
+        <aura:if isTrue="{!v.data.length > 0}">
+          	<lightning:datatable data="{!v.data}" columns="{!v.mycolumn}" keyField="id">
+            </lightning:datatable>
+      </aura:if>
+    
+</aura:component>

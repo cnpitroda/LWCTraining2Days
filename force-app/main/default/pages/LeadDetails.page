@@ -1,0 +1,21 @@
+<apex:page standardController="Lead" >
+    <p>
+        Hello {!$User.FirstName}
+    </p>
+    <h2>
+        Welcome to Lead App
+    </h2>
+    <apex:form >
+        <Apex:pageBlock title="Lead View" mode="edit">
+            <apex:pageBlockSection title="Lead Details" columns="2">
+                <apex:outputText value="{!lead.name}"></apex:outputText>
+                <apex:inputField value="{!lead.company}"></apex:inputField>
+                <apex:inputField value="{!lead.status}"></apex:inputField>
+            </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:CommandButton action="{!save}" value="Save"></apex:CommandButton>
+        </apex:pageBlockButtons>
+        </Apex:pageBlock>
+       
+    </apex:form>
+</apex:page>
